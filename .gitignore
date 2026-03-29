@@ -1,0 +1,14 @@
+# Development documentation (keep local only)
+ASSETS_GUIDE.md
+DESIGN_SYSTEM.md
+content/
+
+# macOS system files
+.DS_Store
+**/.DS_Store
+
+# Editor files
+*.swp
+*.swo
+.vscode/
+.idea/
