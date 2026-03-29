@@ -1,0 +1,26 @@
+{
+  "hero": {
+    "trustBadge": {
+      "title": "Freelance BI Consultant",
+      "stats": "10+ clients across 6 industries"
+    },
+    "headline": "Data solutions built around the questions you need answered",
+    "subheadline": "Let's build a data solution based on your business goals",
+    "cta": {
+      "primary": {
+        "text": "Book a Call",
+        "action": "calendly"
+      },
+    },
+    "fudReducer": "Free 15 minute call. I'll tell you if I'm not the right fit.",
+    "heroImage": "assets/images/hero/Hero Image.png",
+    "toolStack": [
+      { "name": "Tableau", "icon": "assets/icons/tools/teal/tableau.svg" },
+      { "name": "Power BI", "icon": "assets/icons/tools/teal/powerbi.svg" },
+      { "name": "SQL", "icon": "assets/icons/tools/teal/sql.svg" },
+      { "name": "Python", "icon": "assets/icons/tools/teal/python.svg" },
+      { "name": "dbt", "icon": "assets/icons/tools/teal/dbt.svg" },
+      { "name": "Excel", "icon": "assets/icons/tools/teal/excel.svg" }
+    ]
+  }
+}
