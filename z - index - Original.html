@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) - Dev -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F4G6LH6RDJ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-F4G6LH6RDJ');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: Title & Description -->
+    <title>Valerie Madojemu - Freelance BI Consultant</title>
+    <meta name="description" content="Freelance BI Consultant helping UK businesses turn data into decisions. Tableau, Power BI, SQL expertise. 10+ clients across 6 industries.">
+
+    <!-- SEO: Open Graph (LinkedIn/Facebook) -->
+    <meta property="og:title" content="Valerie Madojemu | Freelance BI Consultant">
+    <meta property="og:description" content="Data solutions that connect your metrics to business goals. Tableau, Power BI, SQL expertise.">
+    <meta property="og:image" content="assets/images/og-image.png">
+    <meta property="og:type" content="website">
+
+    <!-- SEO: Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Valerie Madojemu | Freelance BI Consultant">
+    <meta name="twitter:description" content="Data solutions that connect your metrics to business goals.">
+    <meta name="twitter:image" content="assets/images/og-image.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/brand/profile_preview.png">
+    <link rel="apple-touch-icon" href="assets/brand/profile_preview.png">
+
+    <!-- Fonts & Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Skip to main content (accessibility) -->
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <!-- Dev Controls (Draggable) -->
+    <div class="dev-controls" id="devControls">
+        <span class="drag-handle">⋮⋮</span>
+        <div class="control-group">
+            <span class="control-label">Projects:</span>
+            <button class="dev-btn active" onclick="setCardCount(3)">3</button>
+            <button class="dev-btn" onclick="setCardCount(6)">6</button>
+        </div>
+        <div class="control-group">
+            <span class="control-label">Testimonials:</span>
+            <button class="dev-btn active" onclick="setTestimonialCount(3)">3</button>
+            <button class="dev-btn" onclick="setTestimonialCount(6)">6</button>
+        </div>
+    </div>
+
+    <!-- Page Container -->
+    <div class="page-container width-1440" id="pageContainer">
+
+        <!-- SECTION 1: NAVIGATION -->
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">
+                    <img src="assets/brand/logo.svg" alt="OVM Analytics Logo" class="nav-logo-icon">
+                    <span class="nav-logo-text">OVM Analytics LTD</span>
+                </a>
+                <!-- Hamburger button (hidden on desktop, shown on mobile) -->
+                <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu" aria-expanded="false">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link active">Home</a>
+                    <a href="portfolio.html" class="nav-link">Portfolio</a>
+                    <a href="#testimonials" class="nav-link">Testimonials</a>
+                    <a href="resources.html" class="nav-link">Resources</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                    <a href="assets/docs/cv.pdf" class="nav-link" target="_blank" rel="noopener noreferrer">CV</a>
+                </div>
+                <div class="nav-social">
+                    <a href="https://www.linkedin.com/in/valeriemadojemu/" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <img src="assets/icons/social/teal/linkedin.svg" alt="LinkedIn">
+                    </a>
+                    <a href="https://github.com/Mad4Viz" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <img src="assets/icons/social/teal/github.svg" alt="GitHub">
+                    </a>
+                    <a href="https://public.tableau.com/app/profile/valerie.madojemu/vizzes" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Tableau Public">
+                        <img src="assets/icons/social/teal/tableau.svg" alt="Tableau Public">
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- SECTION 2: HERO -->
+        <section class="hero" id="main">
+            <div class="hero-container">
+                <!-- Mobile intro: photo + badge side by side (hidden on desktop) -->
+                <div class="hero-intro">
+                    <div class="hero-intro-photo">
+                        <img src="assets/images/hero/Hero Image.png" alt="Valerie Mace">
+                    </div>
+                    <div class="hero-intro-text">
+                        <span class="badge-title">FREELANCE DATA CONSULTANT</span>
+                        <span class="badge-stats">10+ clients across 6 industries</span>
+                    </div>
+                </div>
+                <div class="hero-left">
+                    <p class="hero-trust-badge"><span class="badge-title">Freelance BI Consultant</span><span class="badge-sep"> | </span><span class="badge-stats">10+ clients across 6 industries</span></p>
+                    <h1 class="hero-headline" id="heroHeadline">Data solutions built around the questions you need answered</h1>
+                    <div class="hero-subheadline">
+                        <span id="heroSubheadline">Let's build a data solution based on your business goals</span>
+                    </div>
+                    <div class="toolstack">
+                        <div class="toolstack-icons">
+                            <div class="tool-icon"><img src="assets/icons/tools/teal/tableau.svg" alt="Tableau"></div>
+                            <div class="tool-icon"><img src="assets/icons/tools/teal/powerbi.svg" alt="Power BI"></div>
+                            <div class="tool-icon"><img src="assets/icons/tools/teal/sql.svg" alt="SQL"></div>
+                            <div class="tool-icon"><img src="assets/icons/tools/teal/python.svg" alt="Python"></div>
+                            <div class="tool-icon"><img src="assets/icons/tools/teal/dbt.svg" alt="dbt"></div>
+                            <div class="tool-icon"><img src="assets/icons/tools/teal/excel.svg" alt="Excel"></div>
+                        </div>
+                    </div>
+                    <div class="cta-row">
+                        <a href="javascript:void(0)" class="cta-primary" onclick="openCalendlyModal()">Book a Call</a>
+                        <a href="assets/docs/cv.pdf" class="cta-secondary" target="_blank" rel="noopener noreferrer">View CV</a>
+                    </div>
+                    <p class="hero-fud">Free 15 minute call. I'll tell you if I'm not the right fit.</p>
+                </div>
+                <div class="hero-right">
+                    <div class="hero-image">
+                        <img src="assets/images/hero/Hero Image.png" alt="Data visualisation dashboard example">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOCIAL PROOF BAR -->
+        <div class="social-proof-bar">
+            <div class="logos-row">
+                <!-- Original set -->
+                <div class="logo-item"><img src="assets/logos/clients/everton.svg" alt="Everton FC"></div>
+                <div class="logo-item"><img src="assets/logos/clients/westham.svg" alt="West Ham FC"></div>
+                <div class="logo-item"><img src="assets/logos/clients/linklaters.svg" alt="Linklaters"></div>
+                <div class="logo-item"><img src="assets/logos/clients/viasat.svg" alt="Viasat"></div>
+                <div class="logo-item"><img src="assets/logos/clients/forterra.svg" alt="Forterra"></div>
+                <div class="logo-item"><img src="assets/logos/clients/skillcorner.svg" alt="SkillCorner"></div>
+                <div class="logo-item"><img src="assets/logos/clients/GoDaddy_logo_2020.svg" alt="GoDaddy"></div>
+                <!-- Duplicate for seamless loop (mobile marquee) -->
+                <div class="logo-item logo-duplicate"><img src="assets/logos/clients/everton.svg" alt="Everton FC"></div>
+                <div class="logo-item logo-duplicate"><img src="assets/logos/clients/westham.svg" alt="West Ham FC"></div>
+                <div class="logo-item logo-duplicate"><img src="assets/logos/clients/linklaters.svg" alt="Linklaters"></div>
+                <div class="logo-item logo-duplicate"><img src="assets/logos/clients/viasat.svg" alt="Viasat"></div>
+                <div class="logo-item logo-duplicate"><img src="assets/logos/clients/forterra.svg" alt="Forterra"></div>
+                <div class="logo-item logo-duplicate"><img src="assets/logos/clients/skillcorner.svg" alt="SkillCorner"></div>
+                <div class="logo-item logo-duplicate"><img src="assets/logos/clients/GoDaddy_logo_2020.svg" alt="GoDaddy"></div>
+            </div>
+        </div>
+
+        <!-- SECTION 3: SERVICES + TESTIMONIALS (no header) -->
+        <div id="servicesContainer">
+            <!-- Service blocks loaded dynamically from JSON -->
+        </div>
+
+        <!-- SECTION 4: PORTFOLIO -->
+        <section class="portfolio-section">
+            <div class="portfolio-header">
+                <h2 class="portfolio-title">Featured Projects</h2>
+                <p class="portfolio-subtitle">Projects that turned data into decisions</p>
+            </div>
+            <div class="carousel-wrapper" id="portfolioCarousel">
+                <a class="carousel-arrow left hidden" onclick="scrollCarousel(-1)">‹</a>
+                <div class="carousel-track" id="carouselTrack">
+                    <!-- Featured projects loaded dynamically from portfolio.json -->
+                </div>
+                <a class="carousel-arrow right" onclick="scrollCarousel(1)">›</a>
+            </div>
+            <div class="portfolio-cta-wrapper">
+                <a href="portfolio.html" class="portfolio-cta">Browse all projects</a>
+            </div>
+        </section>
+
+        <!-- SECTION 5: TESTIMONIALS CAROUSEL -->
+        <section class="testimonials-section" id="testimonials">
+            <div class="testimonials-header">
+                <h2 class="testimonials-title">Testimonials</h2>
+                <p class="testimonials-subtitle">What clients say about working together</p>
+            </div>
+            <div class="carousel-wrapper" id="testimonialsCarousel">
+                <a class="carousel-arrow left hidden" onclick="scrollTestimonials(-1)">‹</a>
+                <div class="carousel-track" id="testimonialsTrack">
+                    <!-- Testimonials loaded dynamically from JSON -->
+                </div>
+                <a class="carousel-arrow right" onclick="scrollTestimonials(1)">›</a>
+            </div>
+        </section>
+
+        <!-- Testimonial Modal -->
+        <div class="testimonial-modal-overlay" id="testimonialModal">
+            <div class="testimonial-modal">
+                <div class="testimonial-modal-header">
+                    <div class="testimonial-card-header-left">
+                        <img class="testimonial-card-avatar" id="modalAvatar" src="" alt="">
+                        <div class="testimonial-card-info">
+                            <span class="testimonial-card-name" id="modalName">Client Name</span>
+                            <span class="testimonial-card-role" id="modalRole">Title at Company</span>
+                        </div>
+                    </div>
+                    <button class="testimonial-modal-close" onclick="closeTestimonialModal()">×</button>
+                </div>
+                <div class="testimonial-modal-body">
+                    <p class="testimonial-modal-quote" id="modalQuote">Full testimonial text...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 6: FINAL CTA -->
+        <section class="final-cta-section" id="contact">
+            <div class="final-cta-header">
+                <h2 class="final-cta-title">Get In Touch</h2>
+            </div>
+            <div class="final-cta-container">
+                <div class="final-cta-content">
+                    <p class="final-cta-badge">
+                        <span class="cta-badge-title">Freelance BI Consultant</span>
+                        <span class="cta-badge-sep"> | </span>
+                        <span class="cta-badge-stats">10+ clients across 6 industries</span>
+                    </p>
+                    <h2 class="final-cta-headline">Turn your data into decisions that move the business forward</h2>
+                    <p class="final-cta-body">Whether you're swimming in data or still figuring out what to track, let's build a system that connects your metrics to your goals.</p>
+                    <div class="value-checklist">
+                        <div class="value-checklist-item">
+                            <div class="check-icon"></div>
+                            <p>Strategy that ties metrics to business outcomes</p>
+                        </div>
+                        <div class="value-checklist-item">
+                            <div class="check-icon"></div>
+                            <p>Solutions that cut reporting time from days to minutes</p>
+                        </div>
+                        <div class="value-checklist-item">
+                            <div class="check-icon"></div>
+                            <p>Clear documentation that ensures smooth handover</p>
+                        </div>
+                    </div>
+                    <div class="final-cta-buttons">
+                        <a href="javascript:void(0)" class="cta-primary" onclick="openCalendlyModal()">Book a Call</a>
+                        <a href="assets/docs/cv.pdf" class="cta-secondary" target="_blank" rel="noopener noreferrer">View CV</a>
+                    </div>
+                    <p class="final-cta-fud">Free 15 minute call. I'll tell you if I'm not the right fit.</p>
+                </div>
+                <div class="contact-form-wrapper">
+                    <h3 class="contact-form-title">Send a Message</h3>
+                    <form id="contactForm" class="contact-form">
+                        <!-- Web3Forms configuration -->
+                        <input type="hidden" name="access_key" value="fa7489ba-ebf5-48b8-a6f1-91dd3312ec15">
+                        <input type="hidden" name="subject" value="New enquiry from landing page">
+                        <!-- Spam protection honeypot -->
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Tell me about your project..." required></textarea>
+                        </div>
+
+                        <!-- hCaptcha spam protection -->
+                        <div class="h-captcha" data-captcha="true"></div>
+
+                        <button type="submit" class="form-submit" id="formSubmitBtn">Send Message</button>
+                        <p id="formResult" class="form-result"></p>
+                    </form>
+                </div>
+            </div>
+            <!-- CONNECT SECTION -->
+            <div class="connect-section">
+                <h3 class="connect-title">Connect</h3>
+                <div class="connect-icons">
+                    <a href="https://www.linkedin.com/in/valeriemadojemu/" class="connect-icon" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <img src="assets/icons/social/teal/linkedin.svg" alt="LinkedIn">
+                    </a>
+                    <a href="https://github.com/Mad4Viz" class="connect-icon" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <img src="assets/icons/social/teal/github.svg" alt="GitHub">
+                    </a>
+                    <a href="https://public.tableau.com/app/profile/valerie.madojemu/vizzes" class="connect-icon" target="_blank" rel="noopener noreferrer" aria-label="Tableau Public">
+                        <img src="assets/icons/social/teal/tableau.svg" alt="Tableau Public">
+                    </a>
+                    <a href="https://www.upwork.com/freelancers/~018f6e98cc87da2f61" class="connect-icon" target="_blank" rel="noopener noreferrer" aria-label="Upwork">
+                        <img src="assets/icons/social/teal/upwork.svg" alt="Upwork">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Calendly Popup Modal -->
+        <div class="calendly-modal-overlay" id="calendlyModal">
+            <div class="calendly-modal">
+                <button class="calendly-modal-close" onclick="closeCalendlyModal()">&times;</button>
+                <!-- Calendly inline widget (detailed version) -->
+                <div class="calendly-inline-widget" data-url="https://calendly.com/ovm_analytics/30min?hide_gdpr_banner=1" style="width:100%;height:100%;"></div>
+            </div>
+        </div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+        <!-- SECTION 7: FOOTER -->
+        <footer class="footer">
+            <div class="footer-container">
+                <p class="footer-copyright"><span class="copyright-main">&copy; Copyright 2026. Designed by Valerie Madojemu.</span> <span class="copyright-rights">All rights reserved.</span></p>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Lightbox Overlay -->
+    <div class="lightbox-overlay" id="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <div class="lightbox-content" onclick="event.stopPropagation()">
+            Full-size dashboard preview
+        </div>
+    </div>
+
+    <script>
+        // =========================================
+        // MOBILE NAVIGATION TOGGLE
+        // =========================================
+        const navHamburger = document.getElementById('navHamburger');
+        const navElement = document.querySelector('.nav');
+
+        navHamburger.addEventListener('click', function() {
+            // Toggle active class on hamburger (for X animation)
+            navHamburger.classList.toggle('active');
+            // Toggle nav-open class on nav element (to show/hide dropdown)
+            navElement.classList.toggle('nav-open');
+            // Update aria-expanded for accessibility
+            const isExpanded = navHamburger.classList.contains('active');
+            navHamburger.setAttribute('aria-expanded', isExpanded);
+        });
+
+        // Close menu when clicking a nav link (for same-page anchors)
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                navHamburger.classList.remove('active');
+                navElement.classList.remove('nav-open');
+                navHamburger.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // =========================================
+        // DEV CONTROLS: Card Count Toggle
+        // =========================================
+        function setCardCount(count) {
+            const extraCards = document.querySelectorAll('.portfolio-card.extra-card');
+            const buttons = document.querySelectorAll('.dev-controls .dev-btn');
+
+            extraCards.forEach(card => {
+                if (count === 3) {
+                    card.classList.add('hidden-card');
+                } else {
+                    card.classList.remove('hidden-card');
+                }
+            });
+
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.textContent === String(count)) {
+                    btn.classList.add('active');
+                }
+            });
+
+            // Reset carousel position when card count changes
+            resetCarousel();
+        }
+
+        function resetCarousel() {
+            carouselPosition = 0;
+            const track = document.getElementById('carouselTrack');
+            track.style.transform = 'translateX(0)';
+
+            // Hide left arrow (we're at position 0)
+            const wrapper = document.getElementById('portfolioCarousel');
+            const leftArrow = wrapper.querySelector('.carousel-arrow.left');
+            leftArrow.classList.add('hidden');
+
+            // Update arrow visibility using shared function
+            updateCarouselArrows();
+        }
+
+        // Check carousel fit on page load
+        window.addEventListener('load', resetCarousel);
+
+        // =========================================
+        // DRAGGABLE DEV CONTROLS
+        // =========================================
+        (function() {
+            const controls = document.getElementById('devControls');
+            let isDragging = false;
+            let offsetX, offsetY;
+
+            controls.addEventListener('mousedown', function(e) {
+                if (e.target.tagName === 'BUTTON') return;
+                isDragging = true;
+                offsetX = e.clientX - controls.getBoundingClientRect().left;
+                offsetY = e.clientY - controls.getBoundingClientRect().top;
+                controls.style.cursor = 'grabbing';
+            });
+
+            document.addEventListener('mousemove', function(e) {
+                if (!isDragging) return;
+                e.preventDefault();
+                controls.style.left = (e.clientX - offsetX) + 'px';
+                controls.style.top = (e.clientY - offsetY) + 'px';
+                controls.style.right = 'auto';
+            });
+
+            document.addEventListener('mouseup', function() {
+                isDragging = false;
+                controls.style.cursor = 'move';
+            });
+        })();
+
+        // =========================================
+        // LIGHTBOX (with multi-image support)
+        // =========================================
+        let currentLightboxImages = [];
+        let currentLightboxIndex = 0;
+
+        function openLightbox(element) {
+            const carouselImages = element.querySelector('.carousel-images');
+            const lightboxContent = document.querySelector('.lightbox-content');
+
+            if (carouselImages) {
+                currentLightboxImages = JSON.parse(carouselImages.dataset.images);
+                currentLightboxIndex = Array.from(carouselImages.querySelectorAll('img')).findIndex(img => img.classList.contains('active'));
+                renderLightboxWithDots(lightboxContent);
+            } else {
+                const img = element.querySelector('img');
+                currentLightboxImages = [img.src];
+                currentLightboxIndex = 0;
+                lightboxContent.innerHTML = `<img src="${img.src}" alt="${img.alt}">`;
+            }
+
+            document.getElementById('lightbox').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function renderLightboxWithDots(lightboxContent) {
+            const hasMultiple = currentLightboxImages.length > 1;
+
+            const arrowsHTML = hasMultiple
+                ? `<button class="lightbox-arrow-left" onclick="lightboxPrev()">&#8249;</button>
+                   <button class="lightbox-arrow-right" onclick="lightboxNext()">&#8250;</button>`
+                : '';
+
+            const dotsHTML = hasMultiple
+                ? `<div class="lightbox-dots">${currentLightboxImages.map((_, i) =>
+                    `<span class="lightbox-dot${i === currentLightboxIndex ? ' active' : ''}" onclick="switchLightboxImage(${i})"></span>`
+                  ).join('')}</div>`
+                : '';
+
+            lightboxContent.innerHTML = `
+                ${arrowsHTML}
+                <img src="${currentLightboxImages[currentLightboxIndex]}" alt="Portfolio image">
+                ${dotsHTML}
+            `;
+        }
+
+        function switchLightboxImage(index) {
+            currentLightboxIndex = index;
+            renderLightboxWithDots(document.querySelector('.lightbox-content'));
+        }
+
+        function lightboxPrev() {
+            currentLightboxIndex = currentLightboxIndex === 0 ? currentLightboxImages.length - 1 : currentLightboxIndex - 1;
+            renderLightboxWithDots(document.querySelector('.lightbox-content'));
+        }
+
+        function lightboxNext() {
+            currentLightboxIndex = currentLightboxIndex === currentLightboxImages.length - 1 ? 0 : currentLightboxIndex + 1;
+            renderLightboxWithDots(document.querySelector('.lightbox-content'));
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeLightbox();
+            if (document.getElementById('lightbox').classList.contains('active') && currentLightboxImages.length > 1) {
+                if (e.key === 'ArrowLeft') lightboxPrev();
+                if (e.key === 'ArrowRight') lightboxNext();
+            }
+        });
+
+        // =========================================
+        // CAROUSEL NAVIGATION
+        // =========================================
+        let carouselPosition = 0;
+        const CARD_WIDTH = 400;
+        const GAP = 24;
+
+        function scrollCarousel(direction) {
+            const track = document.getElementById('carouselTrack');
+            // Remove centering when scrolling
+            track.classList.remove('centered');
+
+            // Only count visible cards (not hidden)
+            const cards = track.querySelectorAll('.portfolio-card:not(.hidden-card)');
+            const totalCards = cards.length;
+            const wrapper = document.querySelector('.carousel-wrapper');
+            const cardWidth = CARD_WIDTH + GAP;
+            const visibleWidth = wrapper.clientWidth;
+            const totalTrackWidth = totalCards * cardWidth - GAP;
+
+            const maxOffset = totalTrackWidth - visibleWidth;
+            const cardsFullyVisible = Math.floor((visibleWidth + GAP) / cardWidth);
+            const maxPosition = Math.max(0, totalCards - cardsFullyVisible);
+
+            carouselPosition += direction;
+            carouselPosition = Math.max(0, Math.min(carouselPosition, maxPosition));
+
+            let offset;
+            if (carouselPosition === 0) {
+                offset = 0;
+            } else if (carouselPosition >= maxPosition) {
+                offset = maxOffset;
+            } else {
+                const totalCardsWidth = cardsFullyVisible * cardWidth - GAP;
+                const symmetricPeek = (visibleWidth - totalCardsWidth) / 2;
+                offset = (carouselPosition * cardWidth) - symmetricPeek;
+                offset = Math.max(0, Math.min(offset, maxOffset));
+            }
+
+            track.style.transform = `translateX(-${offset}px)`;
+
+            const leftArrow = document.querySelector('.carousel-arrow.left');
+            const rightArrow = document.querySelector('.carousel-arrow.right');
+
+            leftArrow.classList.toggle('hidden', carouselPosition === 0);
+            rightArrow.classList.toggle('hidden', carouselPosition >= maxPosition);
+        }
+
+        // =========================================
+        // TESTIMONIALS CAROUSEL NAVIGATION
+        // =========================================
+        let testimonialsPosition = 0;
+
+        function scrollTestimonials(direction) {
+            const track = document.getElementById('testimonialsTrack');
+            track.classList.remove('centered');
+
+            const cards = track.querySelectorAll('.testimonial-card-full:not(.hidden-card)');
+            const totalCards = cards.length;
+            const wrapper = document.getElementById('testimonialsCarousel');
+            const cardWidth = CARD_WIDTH + GAP;
+            const visibleWidth = wrapper.clientWidth;
+            const totalTrackWidth = totalCards * cardWidth - GAP;
+
+            const maxOffset = totalTrackWidth - visibleWidth;
+            const cardsFullyVisible = Math.floor((visibleWidth + GAP) / cardWidth);
+            const maxPosition = Math.max(0, totalCards - cardsFullyVisible);
+
+            testimonialsPosition += direction;
+            testimonialsPosition = Math.max(0, Math.min(testimonialsPosition, maxPosition));
+
+            let offset;
+            if (testimonialsPosition === 0) {
+                offset = 0;
+            } else if (testimonialsPosition >= maxPosition) {
+                offset = maxOffset;
+            } else {
+                const totalCardsWidth = cardsFullyVisible * cardWidth - GAP;
+                const symmetricPeek = (visibleWidth - totalCardsWidth) / 2;
+                offset = (testimonialsPosition * cardWidth) - symmetricPeek;
+                offset = Math.max(0, Math.min(offset, maxOffset));
+            }
+
+            track.style.transform = `translateX(-${offset}px)`;
+
+            const leftArrow = wrapper.querySelector('.carousel-arrow.left');
+            const rightArrow = wrapper.querySelector('.carousel-arrow.right');
+
+            leftArrow.classList.toggle('hidden', testimonialsPosition === 0);
+            rightArrow.classList.toggle('hidden', testimonialsPosition >= maxPosition);
+        }
+
+        // =========================================
+        // DEV CONTROLS: Testimonial Count Toggle
+        // =========================================
+        function setTestimonialCount(count) {
+            const extraCards = document.querySelectorAll('.testimonial-card-full.extra-testimonial-card');
+            const controlGroups = document.querySelectorAll('.dev-controls .control-group');
+            const testimonialButtons = controlGroups[1].querySelectorAll('.dev-btn');
+
+            extraCards.forEach(card => {
+                if (count === 3) {
+                    card.classList.add('hidden-card');
+                } else {
+                    card.classList.remove('hidden-card');
+                }
+            });
+
+            testimonialButtons.forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.textContent === String(count)) {
+                    btn.classList.add('active');
+                }
+            });
+
+            // Reset testimonials carousel position
+            testimonialsPosition = 0;
+            const track = document.getElementById('testimonialsTrack');
+            track.style.transform = 'translateX(0)';
+
+            // Hide left arrow (we're at position 0)
+            const wrapper = document.getElementById('testimonialsCarousel');
+            const leftArrow = wrapper.querySelector('.carousel-arrow.left');
+            leftArrow.classList.add('hidden');
+
+            // Update arrow visibility using shared function
+            updateCarouselArrows();
+        }
+
+        // =========================================
+        // TESTIMONIAL MODAL
+        // =========================================
+        function openTestimonialModal(card) {
+            const name = card.querySelector('.testimonial-card-name').textContent;
+            // Remove <br> from role for modal (natural text flow in full screen)
+            const role = card.querySelector('.testimonial-card-role').innerHTML.replace(/<br\s*\/?>/gi, ' ');
+            const quote = card.querySelector('.testimonial-card-quote').innerHTML;
+            const avatar = card.querySelector('.testimonial-card-avatar');
+            const avatarSrc = avatar.src;
+            const avatarAlt = avatar.alt;
+
+            document.getElementById('modalName').textContent = name;
+            document.getElementById('modalRole').innerHTML = role;
+            document.getElementById('modalQuote').innerHTML = quote;
+            document.getElementById('modalAvatar').src = avatarSrc;
+            document.getElementById('modalAvatar').alt = avatarAlt;
+
+            document.getElementById('testimonialModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeTestimonialModal() {
+            document.getElementById('testimonialModal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close on overlay click
+        document.getElementById('testimonialModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeTestimonialModal();
+            }
+        });
+
+        // Close on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeTestimonialModal();
+            }
+        });
+
+        // =========================================
+        // CAROUSEL ARROW VISIBILITY
+        // =========================================
+        function updateCarouselArrows() {
+            const cardWidth = CARD_WIDTH + GAP;
+
+            // Portfolio carousel
+            const portfolioWrapper = document.getElementById('portfolioCarousel');
+            const portfolioTrack = document.getElementById('carouselTrack');
+            const portfolioRightArrow = portfolioWrapper.querySelector('.carousel-arrow.right');
+            const portfolioCards = portfolioTrack.querySelectorAll('.portfolio-card:not(.hidden-card)');
+            // Use clientWidth (excludes padding) for accurate visible content area
+            const portfolioVisibleWidth = portfolioWrapper.clientWidth;
+            const portfolioTotalWidth = (portfolioCards.length * cardWidth) - GAP;
+
+            if (portfolioTotalWidth <= portfolioVisibleWidth) {
+                portfolioTrack.classList.add('centered');
+                portfolioRightArrow.classList.add('hidden');
+            } else {
+                portfolioTrack.classList.remove('centered');
+                portfolioRightArrow.classList.remove('hidden');
+            }
+
+            // Testimonials carousel
+            const testimonialsWrapper = document.getElementById('testimonialsCarousel');
+            const testimonialsTrack = document.getElementById('testimonialsTrack');
+            const testimonialsRightArrow = testimonialsWrapper.querySelector('.carousel-arrow.right');
+            const testimonialsCards = testimonialsTrack.querySelectorAll('.testimonial-card-full:not(.hidden-card)');
+            // Use clientWidth (excludes padding) for accurate visible content area
+            const testimonialsVisibleWidth = testimonialsWrapper.clientWidth;
+            const testimonialsTotalWidth = (testimonialsCards.length * cardWidth) - GAP;
+
+            if (testimonialsTotalWidth <= testimonialsVisibleWidth) {
+                testimonialsTrack.classList.add('centered');
+                testimonialsRightArrow.classList.add('hidden');
+            } else {
+                testimonialsTrack.classList.remove('centered');
+                testimonialsRightArrow.classList.remove('hidden');
+            }
+        }
+
+        // =========================================
+        // LOAD TESTIMONIALS FROM JSON
+        // =========================================
+        function renderTestimonials(testimonials) {
+            const track = document.getElementById('testimonialsTrack');
+            const linkedinIconSVG = '<svg class="testimonial-linkedin-icon" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>';
+
+            testimonials.forEach(t => {
+                // Join paragraphs with <br><br> for spacing
+                const quoteHtml = t.quote.join('<br><br>');
+
+                const card = document.createElement('div');
+                card.className = 'testimonial-card-full';
+                card.innerHTML = `
+                    <div class="testimonial-card-header">
+                        <div class="testimonial-card-header-left">
+                            <img class="testimonial-card-avatar" src="${t.photo}" alt="${t.name}">
+                            <div class="testimonial-card-info">
+                                <span class="testimonial-card-name">${t.name}</span>
+                                <span class="testimonial-card-role">${t.role} at<br>${t.company}</span>
+                            </div>
+                        </div>
+                        ${linkedinIconSVG}
+                    </div>
+                    <div class="testimonial-card-body">
+                        <p class="testimonial-card-quote">${quoteHtml}</p>
+                        <a href="javascript:void(0)" class="testimonial-read-more" onclick="openTestimonialModal(this.closest('.testimonial-card-full'))">Read more</a>
+                    </div>
+                `;
+                track.appendChild(card);
+            });
+
+            // Update carousel arrows after testimonials are loaded
+            updateCarouselArrows();
+        }
+
+        // Load testimonials on page load
+        fetch('data/testimonials.json')
+            .then(response => response.json())
+            .then(testimonials => renderTestimonials(testimonials))
+            .catch(error => console.error('Error loading testimonials:', error));
+
+        // =========================================
+        // LOAD SERVICES FROM JSON
+        // =========================================
+        function renderServices(data) {
+            const container = document.getElementById('servicesContainer');
+
+            data.services.forEach((service, index) => {
+                // Alternate layout: even index = image left, odd = image right (reverse)
+                const isReverse = index % 2 === 1;
+
+                const block = document.createElement('div');
+                block.className = `service-block${isReverse ? ' reverse' : ''}`;
+
+                // Build testimonial HTML if quote exists
+                let testimonialHtml = '';
+                if (service.testimonial && service.testimonial.quote) {
+                    testimonialHtml = `
+                        <div class="testimonial-card">
+                            <p class="testimonial-quote">"${service.testimonial.quote}"</p>
+                            <div class="testimonial-author">
+                                <img class="testimonial-avatar" src="${service.testimonial.photo}" alt="${service.testimonial.name}">
+                                <div class="testimonial-info">
+                                    <span class="testimonial-name">${service.testimonial.name}</span>
+                                    <span class="testimonial-role">${service.testimonial.role} at ${service.testimonial.company}</span>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }
+
+                block.innerHTML = `
+                    <div class="service-block-image">
+                        ${service.image ? `<img src="${service.image}" alt="${service.label}" class="service-image">` : '<div class="service-image-placeholder">Image or video</div>'}
+                    </div>
+                    <div class="service-block-content">
+                        <p class="service-label">${service.label || 'Service'}</p>
+                        <h3 class="service-title">${service.title || 'Title coming soon'}</h3>
+                        <p class="service-description">${service.description || 'Description coming soon.'}</p>
+                        ${testimonialHtml}
+                    </div>
+                `;
+
+                container.appendChild(block);
+            });
+        }
+
+        // Load services on page load
+        fetch('data/services.json')
+            .then(response => response.json())
+            .then(data => renderServices(data))
+            .catch(error => console.error('Error loading services:', error));
+
+        // =========================================
+        // LOAD HERO FROM JSON
+        // =========================================
+        function renderHero(data) {
+            const hero = data.hero;
+            document.getElementById('heroHeadline').textContent = hero.headline;
+            document.getElementById('heroSubheadline').textContent = hero.subheadline;
+        }
+
+        // Load hero on page load
+        fetch('data/hero.json')
+            .then(response => response.json())
+            .then(data => renderHero(data))
+            .catch(error => console.error('Error loading hero:', error));
+
+        // =========================================
+        // FEATURED PORTFOLIO (from JSON)
+        // =========================================
+        const FEATURED_IDS = [1, 2, 9]; // Hockey Recruitment, Marketing Spend, LinkedIn Performance
+
+        function loadFeaturedPortfolio() {
+            fetch('data/portfolio.json')
+                .then(response => response.json())
+                .then(projects => {
+                    const featured = projects.filter(p => FEATURED_IDS.includes(p.id));
+                    renderFeaturedProjects(featured);
+                })
+                .catch(error => console.error('Error loading featured portfolio:', error));
+        }
+
+        function renderFeaturedProjects(projects) {
+            const track = document.getElementById('carouselTrack');
+            track.innerHTML = projects.map(project => createFeaturedCard(project)).join('');
+            updateCarouselArrows(); // Re-check if arrows needed
+        }
+
+        function createFeaturedCard(project) {
+            // Build tools HTML - EXACT match to portfolio.html
+            const toolsHTML = project.tools.map(tool =>
+                `<div class="portfolio-tool-icon"><img src="assets/icons/tools/teal/${tool}.svg" alt="${tool}"></div>`
+            ).join('');
+
+            // Build links HTML - EXACT match to portfolio.html
+            const linksHTML = Object.entries(project.links).map(([type, url], i, arr) => {
+                const separator = i < arr.length - 1 ? '<span class="link-separator">|</span>' : '';
+                const label = type.charAt(0).toUpperCase() + type.slice(1);
+                return `<a href="${url}" target="_blank" rel="noopener noreferrer">${label} ↗</a>${separator}`;
+            }).join('');
+
+            // Build screenshot HTML - EXACT match to portfolio.html (single vs multi-image)
+            const isMultiImage = project.images.length > 1;
+            let screenshotHTML;
+            if (isMultiImage) {
+                screenshotHTML = `
+                    <div class="carousel-images" data-images='${JSON.stringify(project.images)}'>
+                        ${project.images.map((img, i) => `<img src="${img}" alt="${project.title}" class="${i === 0 ? 'active' : ''}">`).join('')}
+                    </div>
+                    <button class="carousel-arrow-left" onclick="event.stopPropagation(); cardCarouselPrev(this)">&#8249;</button>
+                    <button class="carousel-arrow-right" onclick="event.stopPropagation(); cardCarouselNext(this)">&#8250;</button>
+                    <div class="portfolio-dots">
+                        ${project.images.map((_, i) => `<span class="portfolio-dot${i === 0 ? ' active' : ''}" data-index="${i}"></span>`).join('')}
+                    </div>
+                `;
+            } else {
+                screenshotHTML = `<img src="${project.images[0]}" alt="${project.title}">`;
+            }
+
+            return `
+                <div class="portfolio-card" data-industry="${project.industry}" data-category="${project.category}" data-project-type="${project.projectType}">
+                    <div class="portfolio-screenshot${project.isMobile ? ' mobile-screenshot' : ''}" onclick="openLightbox(this)">
+                        ${screenshotHTML}
+                        <span class="expand-icon">&#x2922;</span>
+                    </div>
+                    <div class="portfolio-card-content">
+                        <div class="portfolio-tools">${toolsHTML}</div>
+                        <h3 class="portfolio-card-title">${project.title}</h3>
+                        <p class="portfolio-card-description">${project.description}</p>
+                        <div class="portfolio-links">${linksHTML}</div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Load featured portfolio on page load
+        loadFeaturedPortfolio();
+
+        // =========================================
+        // FEATURED CARD IMAGE CAROUSEL (multi-image)
+        // =========================================
+        document.getElementById('carouselTrack').addEventListener('click', function(e) {
+            if (e.target.classList.contains('portfolio-dot')) {
+                e.stopPropagation();
+                const container = e.target.closest('.portfolio-screenshot');
+                const index = parseInt(e.target.dataset.index);
+                switchCardImage(container, index);
+            }
+        });
+
+        function switchCardImage(container, index) {
+            const images = container.querySelectorAll('.carousel-images img');
+            const dots = container.querySelectorAll('.portfolio-dot');
+            images.forEach((img, i) => img.classList.toggle('active', i === index));
+            dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+        }
+
+        function cardCarouselPrev(button) {
+            const container = button.closest('.portfolio-screenshot');
+            const images = container.querySelectorAll('.carousel-images img');
+            const currentIndex = Array.from(images).findIndex(img => img.classList.contains('active'));
+            switchCardImage(container, currentIndex === 0 ? images.length - 1 : currentIndex - 1);
+        }
+
+        function cardCarouselNext(button) {
+            const container = button.closest('.portfolio-screenshot');
+            const images = container.querySelectorAll('.carousel-images img');
+            const currentIndex = Array.from(images).findIndex(img => img.classList.contains('active'));
+            switchCardImage(container, currentIndex === images.length - 1 ? 0 : currentIndex + 1);
+        }
+
+        // =========================================
+        // MOBILE SWIPE GESTURES FOR MULTI-IMAGE CARDS
+        // =========================================
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        document.getElementById('carouselTrack').addEventListener('touchstart', function(e) {
+            const carouselImages = e.target.closest('.carousel-images');
+            if (carouselImages) {
+                touchStartX = e.changedTouches[0].screenX;
+            }
+        }, { passive: true });
+
+        document.getElementById('carouselTrack').addEventListener('touchend', function(e) {
+            const carouselImages = e.target.closest('.carousel-images');
+            if (carouselImages) {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe(carouselImages.closest('.portfolio-screenshot'));
+            }
+        }, { passive: true });
+
+        function handleSwipe(container) {
+            const swipeThreshold = 50;
+            const diff = touchStartX - touchEndX;
+
+            if (Math.abs(diff) > swipeThreshold) {
+                const images = container.querySelectorAll('.carousel-images img');
+                const currentIndex = Array.from(images).findIndex(img => img.classList.contains('active'));
+
+                if (diff > 0) {
+                    const newIndex = currentIndex === images.length - 1 ? 0 : currentIndex + 1;
+                    switchCardImage(container, newIndex);
+                } else {
+                    const newIndex = currentIndex === 0 ? images.length - 1 : currentIndex - 1;
+                    switchCardImage(container, newIndex);
+                }
+            }
+        }
+
+        // Run on page load
+        updateCarouselArrows();
+
+        // Run on window resize (debounced)
+        let resizeTimeout;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(updateCarouselArrows, 100);
+        });
+
+        // =========================================
+        // CALENDLY POPUP MODAL
+        // =========================================
+        function openCalendlyModal() {
+            document.getElementById('calendlyModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeCalendlyModal() {
+            document.getElementById('calendlyModal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close on overlay click
+        document.getElementById('calendlyModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeCalendlyModal();
+            }
+        });
+
+        // Close on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && document.getElementById('calendlyModal').classList.contains('active')) {
+                closeCalendlyModal();
+            }
+        });
+
+        // =========================================
+        // CONTACT FORM (Web3Forms AJAX)
+        // =========================================
+        const contactForm = document.getElementById('contactForm');
+        const formResult = document.getElementById('formResult');
+        const submitBtn = document.getElementById('formSubmitBtn');
+
+        contactForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            // Validate hCaptcha
+            const hCaptchaResponse = contactForm.querySelector('textarea[name=h-captcha-response]');
+            if (!hCaptchaResponse || !hCaptchaResponse.value) {
+                formResult.textContent = 'Please complete the captcha.';
+                formResult.className = 'form-result error';
+                return;
+            }
+
+            // Show loading state
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+            formResult.textContent = '';
+            formResult.className = 'form-result';
+
+            const formData = new FormData(contactForm);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+
+            try {
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: json
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    formResult.textContent = 'Message sent successfully!';
+                    formResult.className = 'form-result success';
+                    contactForm.reset();
+                } else {
+                    formResult.textContent = 'Something went wrong. Please try again.';
+                    formResult.className = 'form-result error';
+                }
+            } catch (error) {
+                formResult.textContent = 'Something went wrong. Please try again.';
+                formResult.className = 'form-result error';
+            }
+
+            // Reset button
+            submitBtn.textContent = 'Send Message';
+            submitBtn.disabled = false;
+        });
+
+    </script>
+    <!-- hCaptcha script (Web3Forms integration) -->
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+</body>
+</html>

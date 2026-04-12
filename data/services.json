@@ -1,0 +1,25 @@
+{
+  "services": [
+    {
+      "id": 1,
+      "label": "Data Strategy",
+      "title": "Find the pulse of your business goals within your data",
+      "description": "I’ll help improve alignment around the metrics that actually matter.",
+      "image": "assets/images/services/gears.jpg"
+    },
+    {
+      "id": 2,
+      "label": "Data Solutions",
+      "title": "Get answers fast",
+      "description": "I'll build solutions that save you time and allow you to act faster.",
+      "image":"assets/images/services/clock2.png"
+    },
+    {
+      "id": 3,
+      "label": "Sustainable Delivery",
+      "title": "Solutions Built to Last",
+      "description": "Full documentation and structured handovers, ensure the expertise stays in-house.",
+      "image": "assets/images/services/long-term2.png"
+    }
+  ]
+}
