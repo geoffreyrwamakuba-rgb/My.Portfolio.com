@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) - Dev -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F4G6LH6RDJ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-F4G6LH6RDJ');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: Title & Description -->
+    <title>Geoffrey Rwamakuba - Freelance Data Analyst</title>
+    <meta name="description" content="Data portfolio.">
+
+    <!-- SEO: Open Graph (LinkedIn/Facebook) -->
+    <meta property="og:title" content="Portfolio | Valerie Madojemu - Data Consultant">
+    <meta property="og:description" content="Data visualisation portfolio showcasing Tableau and Power BI dashboards.">
+    <meta property="og:image" content="assets/images/og-image.png">
+    <meta property="og:type" content="website">
+
+    <!-- SEO: Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Portfolio | Geoffrey Rwamakuba">
+    <meta name="twitter:description" content="Data portfolio.">
+    <meta name="twitter:image" content="assets/images/og-image.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="">
+    <link rel="apple-touch-icon" href="">
+
+    <!-- Fonts & Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Skip to main content (accessibility) -->
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <!-- Page Container -->
+    <div class="page-container">
+
+        <!-- NAVIGATION -->
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">
+                    <!-- <img src="assets/brand/logo.svg" alt="OVM Analytics Logo" class="nav-logo-icon"> -->
+                    <span class="nav-logo-text">Analytics Portfolio</span>
+                </a>
+                <!-- Hamburger button (hidden on desktop, shown on mobile) -->
+                <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu" aria-expanded="false">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="portfolio.html" class="nav-link active">Portfolio</a>
+                    <!-- <a href="index.html#testimonials" class="nav-link">Testimonials</a>
+                    <a href="resources.html" class="nav-link">Resources</a> -->
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                    <a href="assets/docs/cv.pdf" class="nav-link" target="_blank" rel="noopener noreferrer">CV</a>
+                </div>
+                <div class="nav-social">
+                    <a href="https://www.linkedin.com/in/geoffrey-rwamakuba-0442b8241/" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <img src="assets/icons/social/original/linkedin.svg" alt="LinkedIn">
+                    </a>
+                    <a href="https://github.com/geoffreyrwamakuba-rgb" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <img src="assets/icons/social/original/github.svg" alt="GitHub">
+                    </a>
+                    <!-- <a href="https://public.tableau.com/app/profile/valerie.madojemu/vizzes" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Tableau Public">
+                        <img src="assets/icons/social/teal/tableau.svg" alt="Tableau Public"> -->
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- PAGE HEADER -->
+        <section class="page-header" id="main">
+            <h1 class="page-title">Portfolio</h1>
+            <p class="page-subtitle">Projects that turned data into decisions</p>
+        </section>
+
+        <!-- FILTERS -->
+        <!-- <section class="filters-section">
+            <div class="filters-container">
+                <div class="filter-group">
+                    <select class="filter-select" id="industryFilter" onchange="filterProjects()">
+                        <option value="all">All Industries</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <select class="filter-select" id="categoryFilter" onchange="filterProjects()">
+                        <option value="all">All Categories</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <select class="filter-select" id="projectTypeFilter" onchange="filterProjects()">
+                        <option value="all">All Project Types</option>
+                    </select>
+                </div>
+                <button class="reset-btn" onclick="resetFilters()">Reset</button>
+            </div>
+        </section> -->
+
+        <!-- PORTFOLIO GRID -->
+        <section class="portfolio-grid-section">
+            <div class="portfolio-grid" id="portfolioGrid">
+                <!-- Projects loaded dynamically from data/portfolio.json -->
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer-container">
+                <p class="footer-copyright"><span class="copyright-main">&copy; Copyright 2026. Designed by Valerie Madojemu.</span> <span class="copyright-rights">All rights reserved.</span></p>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Lightbox Overlay -->
+    <div class="lightbox-overlay" id="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <div class="lightbox-content" onclick="event.stopPropagation()">
+            Full-size dashboard preview
+        </div>
+    </div>
+
+    <script>
+        // =========================================
+        // MOBILE NAVIGATION TOGGLE
+        // =========================================
+        const navHamburger = document.getElementById('navHamburger');
+        const navElement = document.querySelector('.nav');
+
+        navHamburger.addEventListener('click', function() {
+            navHamburger.classList.toggle('active');
+            navElement.classList.toggle('nav-open');
+            const isExpanded = navHamburger.classList.contains('active');
+            navHamburger.setAttribute('aria-expanded', isExpanded);
+        });
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                navHamburger.classList.remove('active');
+                navElement.classList.remove('nav-open');
+                navHamburger.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // =========================================
+        // LOAD PORTFOLIO FROM JSON
+        // =========================================
+
+        function loadPortfolio() {
+            fetch('data/portfolio.json')
+                .then(response => response.json())
+                .then(projects => renderPortfolio(projects))
+                .catch(error => console.error('Error loading portfolio:', error));
+        }
+
+        function renderPortfolio(projects) {
+            const grid = document.getElementById('portfolioGrid');
+            grid.innerHTML = projects.map(project => createProjectCard(project)).join('');
+            filterProjects(); // Initialize filters after render
+        }
+
+        function createProjectCard(project) {
+            const isMultiImage = project.images.length > 1;
+
+            // Build tools HTML
+            const toolsHTML = project.tools.map(tool =>
+                `<div class="portfolio-tool-icon"><img src="assets/icons/tools/teal/${tool}.svg" alt="${tool}"></div>`
+            ).join('');
+
+            // Build links HTML
+            const linksHTML = Object.entries(project.links).map(([type, url], i, arr) => {
+                const separator = i < arr.length - 1 ? '<span class="link-separator">|</span>' : '';
+                const label = type.charAt(0).toUpperCase() + type.slice(1);
+                return `<a href="${url}" target="_blank" rel="noopener noreferrer">${label} ↗</a>${separator}`;
+            }).join('');
+
+            // Build screenshot HTML (single vs multi-image)
+            let screenshotHTML;
+            if (isMultiImage) {
+                screenshotHTML = `
+                    <div class="carousel-images" data-images='${JSON.stringify(project.images)}'>
+                        ${project.images.map((img, i) => `<img src="${img}" alt="${project.title}" class="${i === 0 ? 'active' : ''}">`).join('')}
+                    </div>
+                    <button class="carousel-arrow-left" onclick="event.stopPropagation(); carouselPrev(this)">&#8249;</button>
+                    <button class="carousel-arrow-right" onclick="event.stopPropagation(); carouselNext(this)">&#8250;</button>
+                    <div class="portfolio-dots">
+                        ${project.images.map((_, i) => `<span class="portfolio-dot${i === 0 ? ' active' : ''}" data-index="${i}"></span>`).join('')}
+                    </div>
+                `;
+            } else {
+                screenshotHTML = `<img src="${project.images[0]}" alt="${project.title}">`;
+            }
+
+            return `
+                <div class="portfolio-card" data-industry="${project.industry}" data-category="${project.category}" data-project-type="${project.projectType}">
+                    <div class="portfolio-screenshot${project.isMobile ? ' mobile-screenshot' : ''}" onclick="openLightbox(this)">
+                        ${screenshotHTML}
+                        <span class="expand-icon">&#x2922;</span>
+                    </div>
+                    <div class="portfolio-card-content">
+                        <div class="portfolio-tools">${toolsHTML}</div>
+                        <h3 class="portfolio-card-title">${project.title}</h3>
+                        <p class="portfolio-card-description">${project.description}</p>
+                        <div class="portfolio-links">${linksHTML}</div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // =========================================
+        // PORTFOLIO IMAGE CAROUSEL
+        // =========================================
+
+        // Event delegation for dynamically created dots
+        document.getElementById('portfolioGrid').addEventListener('click', function(e) {
+            if (e.target.classList.contains('portfolio-dot')) {
+                e.stopPropagation();
+                const container = e.target.closest('.portfolio-screenshot');
+                const index = parseInt(e.target.dataset.index);
+                switchCardImage(container, index);
+            }
+        });
+
+        function switchCardImage(container, index) {
+            const images = container.querySelectorAll('.carousel-images img');
+            const dots = container.querySelectorAll('.portfolio-dot');
+
+            images.forEach((img, i) => {
+                img.classList.toggle('active', i === index);
+            });
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+        }
+
+        // Arrow navigation for card carousel
+        function carouselPrev(button) {
+            const container = button.closest('.portfolio-screenshot');
+            const images = container.querySelectorAll('.carousel-images img');
+            const currentIndex = Array.from(images).findIndex(img => img.classList.contains('active'));
+            const newIndex = currentIndex === 0 ? images.length - 1 : currentIndex - 1;
+            switchCardImage(container, newIndex);
+        }
+
+        function carouselNext(button) {
+            const container = button.closest('.portfolio-screenshot');
+            const images = container.querySelectorAll('.carousel-images img');
+            const currentIndex = Array.from(images).findIndex(img => img.classList.contains('active'));
+            const newIndex = currentIndex === images.length - 1 ? 0 : currentIndex + 1;
+            switchCardImage(container, newIndex);
+        }
+
+        // =========================================
+        // MOBILE SWIPE GESTURES FOR MULTI-IMAGE CARDS
+        // =========================================
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        document.getElementById('portfolioGrid').addEventListener('touchstart', function(e) {
+            const carouselImages = e.target.closest('.carousel-images');
+            if (carouselImages) {
+                touchStartX = e.changedTouches[0].screenX;
+            }
+        }, { passive: true });
+
+        document.getElementById('portfolioGrid').addEventListener('touchend', function(e) {
+            const carouselImages = e.target.closest('.carousel-images');
+            if (carouselImages) {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe(carouselImages.closest('.portfolio-screenshot'));
+            }
+        }, { passive: true });
+
+        function handleSwipe(container) {
+            const swipeThreshold = 50;
+            const diff = touchStartX - touchEndX;
+
+            if (Math.abs(diff) > swipeThreshold) {
+                const images = container.querySelectorAll('.carousel-images img');
+                const currentIndex = Array.from(images).findIndex(img => img.classList.contains('active'));
+
+                if (diff > 0) {
+                    // Swipe left = next image
+                    const newIndex = currentIndex === images.length - 1 ? 0 : currentIndex + 1;
+                    switchCardImage(container, newIndex);
+                } else {
+                    // Swipe right = previous image
+                    const newIndex = currentIndex === 0 ? images.length - 1 : currentIndex - 1;
+                    switchCardImage(container, newIndex);
+                }
+            }
+        }
+
+        // =========================================
+        // LIGHTBOX (with multi-image support)
+        // =========================================
+        let currentLightboxImages = [];
+        let currentLightboxIndex = 0;
+
+        function openLightbox(element) {
+            const carouselImages = element.querySelector('.carousel-images');
+            const lightboxContent = document.querySelector('.lightbox-content');
+
+            if (carouselImages) {
+                // Multi-image: get all images
+                currentLightboxImages = JSON.parse(carouselImages.dataset.images);
+                currentLightboxIndex = Array.from(carouselImages.querySelectorAll('img')).findIndex(img => img.classList.contains('active'));
+
+                renderLightboxWithDots(lightboxContent);
+            } else {
+                // Single image
+                const img = element.querySelector('img');
+                currentLightboxImages = [img.src];
+                currentLightboxIndex = 0;
+                lightboxContent.innerHTML = `<img src="${img.src}" alt="${img.alt}">`;
+            }
+
+            document.getElementById('lightbox').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function renderLightboxWithDots(lightboxContent) {
+            const hasMultiple = currentLightboxImages.length > 1;
+
+            const arrowsHTML = hasMultiple
+                ? `<button class="lightbox-arrow-left" onclick="lightboxPrev()">&#8249;</button>
+                   <button class="lightbox-arrow-right" onclick="lightboxNext()">&#8250;</button>`
+                : '';
+
+            const dotsHTML = hasMultiple
+                ? `<div class="lightbox-dots">${currentLightboxImages.map((_, i) =>
+                    `<span class="lightbox-dot${i === currentLightboxIndex ? ' active' : ''}" onclick="switchLightboxImage(${i})"></span>`
+                  ).join('')}</div>`
+                : '';
+
+            lightboxContent.innerHTML = `
+                ${arrowsHTML}
+                <img src="${currentLightboxImages[currentLightboxIndex]}" alt="Portfolio image">
+                ${dotsHTML}
+            `;
+        }
+
+        function switchLightboxImage(index) {
+            currentLightboxIndex = index;
+            renderLightboxWithDots(document.querySelector('.lightbox-content'));
+        }
+
+        function lightboxPrev() {
+            currentLightboxIndex = currentLightboxIndex === 0 ? currentLightboxImages.length - 1 : currentLightboxIndex - 1;
+            renderLightboxWithDots(document.querySelector('.lightbox-content'));
+        }
+
+        function lightboxNext() {
+            currentLightboxIndex = currentLightboxIndex === currentLightboxImages.length - 1 ? 0 : currentLightboxIndex + 1;
+            renderLightboxWithDots(document.querySelector('.lightbox-content'));
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeLightbox();
+            // Arrow key navigation for lightbox
+            if (document.getElementById('lightbox').classList.contains('active') && currentLightboxImages.length > 1) {
+                if (e.key === 'ArrowLeft') lightboxPrev();
+                if (e.key === 'ArrowRight') lightboxNext();
+            }
+        });
+
+        // =========================================
+        // FILTER FUNCTIONALITY (Cascading)
+        // =========================================
+
+        // Label mappings for display
+        const labelMaps = {
+            industry: {
+                'e-commerce': 'E-Commerce',
+                'digital-marketing': 'Digital Marketing',
+                'logistics': 'Logistics',
+                'finance': 'Finance',
+                'sports': 'Sports',
+                'aviation': 'Aviation'
+            },
+            category: {
+                'visualisation': 'Data Visualisation',
+                'analytics-engineering': 'Analytics Engineering'
+            },
+            projectType: {
+                'business-dashboard': 'Business Dashboard',
+                'makeover': 'Makeover',
+                'data-pipeline': 'Data Pipeline'
+            }
+        };
+
+        // Get all unique values from cards
+        function getCardData() {
+            const cards = document.querySelectorAll('.portfolio-card');
+            return Array.from(cards).map(card => ({
+                element: card,
+                industry: card.dataset.industry,
+                category: card.dataset.category,
+                projectType: card.dataset.projectType
+            }));
+        }
+
+        // Get filtered cards based on current selections
+        function getFilteredCards(excludeFilter = null) {
+            const industryFilter = document.getElementById('industryFilter').value;
+            const categoryFilter = document.getElementById('categoryFilter').value;
+            const projectTypeFilter = document.getElementById('projectTypeFilter').value;
+
+            const allCards = getCardData();
+
+            return allCards.filter(card => {
+                const matchesIndustry = excludeFilter === 'industry' || industryFilter === 'all' || card.industry.split(' ').includes(industryFilter);
+                const matchesCategory = excludeFilter === 'category' || categoryFilter === 'all' || card.category === categoryFilter;
+                const matchesProjectType = excludeFilter === 'projectType' || projectTypeFilter === 'all' || card.projectType === projectTypeFilter;
+                return matchesIndustry && matchesCategory && matchesProjectType;
+            });
+        }
+
+        // Update dropdown options based on available data
+        function updateDropdownOptions(selectId, availableValues, labelMap, currentValue) {
+            const select = document.getElementById(selectId);
+            const allOption = select.options[0]; // Keep "All X" option
+
+            // Clear all options except first
+            while (select.options.length > 1) {
+                select.remove(1);
+            }
+
+            // Add available options
+            const uniqueValues = [...new Set(availableValues)].sort();
+            uniqueValues.forEach(value => {
+                const option = document.createElement('option');
+                option.value = value;
+                option.textContent = labelMap[value] || value;
+                select.appendChild(option);
+            });
+
+            // Restore selection if still valid
+            if (currentValue !== 'all' && uniqueValues.includes(currentValue)) {
+                select.value = currentValue;
+            } else if (currentValue !== 'all') {
+                select.value = 'all';
+            }
+        }
+
+        // Update all filter dropdowns
+        function updateFilterOptions() {
+            const industryValue = document.getElementById('industryFilter').value;
+            const categoryValue = document.getElementById('categoryFilter').value;
+            const projectTypeValue = document.getElementById('projectTypeFilter').value;
+
+            // Get cards that match other filters (excluding current filter)
+            const cardsForIndustry = getFilteredCards('industry');
+            const cardsForCategory = getFilteredCards('category');
+            const cardsForProjectType = getFilteredCards('projectType');
+
+            // Update each dropdown with available options
+            // Split industry values to show each tag separately
+            updateDropdownOptions(
+                'industryFilter',
+                cardsForIndustry.flatMap(c => c.industry.split(' ')),
+                labelMaps.industry,
+                industryValue
+            );
+
+            updateDropdownOptions(
+                'categoryFilter',
+                cardsForCategory.map(c => c.category),
+                labelMaps.category,
+                categoryValue
+            );
+
+            updateDropdownOptions(
+                'projectTypeFilter',
+                cardsForProjectType.map(c => c.projectType),
+                labelMaps.projectType,
+                projectTypeValue
+            );
+        }
+
+        // Main filter function
+        function filterProjects() {
+            const industryFilter = document.getElementById('industryFilter').value;
+            const categoryFilter = document.getElementById('categoryFilter').value;
+            const projectTypeFilter = document.getElementById('projectTypeFilter').value;
+
+            const cards = document.querySelectorAll('.portfolio-card');
+            let visibleCount = 0;
+
+            cards.forEach(card => {
+                const industry = card.dataset.industry;
+                const category = card.dataset.category;
+                const projectType = card.dataset.projectType;
+
+                const matchesIndustry = industryFilter === 'all' || industry.split(' ').includes(industryFilter);
+                const matchesCategory = categoryFilter === 'all' || category === categoryFilter;
+                const matchesProjectType = projectTypeFilter === 'all' || projectType === projectTypeFilter;
+
+                if (matchesIndustry && matchesCategory && matchesProjectType) {
+                    card.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Update dropdown options based on filtered results
+            updateFilterOptions();
+
+            // Show "no results" message if needed
+            const grid = document.getElementById('portfolioGrid');
+            let noResults = grid.querySelector('.no-results');
+
+            if (visibleCount === 0) {
+                if (!noResults) {
+                    noResults = document.createElement('div');
+                    noResults.className = 'no-results';
+                    noResults.textContent = 'No projects match the selected filters.';
+                    grid.appendChild(noResults);
+                }
+            } else if (noResults) {
+                noResults.remove();
+            }
+        }
+
+        // Reset all filters
+        function resetFilters() {
+            document.getElementById('industryFilter').value = 'all';
+            document.getElementById('categoryFilter').value = 'all';
+            document.getElementById('projectTypeFilter').value = 'all';
+            filterProjects();
+        }
+
+        // Initialize portfolio on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            loadPortfolio();
+        });
+    </script>
+</body>
+</html>

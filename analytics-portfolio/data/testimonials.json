@@ -1,0 +1,36 @@
+[
+  {
+    "name": "Lawrence Poxon",
+    "role": "Programme Manager",
+    "company": "Cogent Skills",
+    "photo": "assets/images/testimonials/Lawrence_Poxton_1.png",
+    "quote": [
+      "Valerie has made a significant contribution to the Nuclear Skills Plan, supporting the translation of complex data into clear and actionable insights. She engages effectively with stakeholders to understand their specific requirements, and then develops well-structured visual outputs using tools such as Tableau to meet those needs.",
+      "Her approach is thoughtful and deliberate. Rather than defaulting to standard visual formats, she takes the time to understand the context and intended message, ensuring that the outputs are both accurate and fit for purpose. This has proven especially valuable in areas where clear communication of data has been critical to alignment and decision-making.",
+      "Throughout the project, Valerie has been reliable, professional, and constructive in her engagement. I would be pleased to work with her again in future, and would not hesitate to recommend her to others seeking strong data visualisation capability grounded in user needs."
+    ]
+  },
+  {
+    "name": "Joseph Evans",
+    "role": "1st Team Goalkeeper Analyst",
+    "company": "West Ham United FC",
+    "photo": "assets/images/testimonials/Joseph_Evans_2.png",
+    "quote": [
+      "I had the pleasure of working with Valerie for a week on a project, integrating data visualisation on tableau to support the design of our technical reports to effectively support coaching practices. We collaborated half way through the season.",
+      "Throughout our week working together, I learnt a significant amount from Valerie. Her constant attention to detail and ability to grasp what was required of the technical report was immaculate. Her level of creativity within such a short amount of time was nothing short of incredible and a real inspiration.",
+      "Valerie was a pleasure to work with and I would highly recommend Valerie to any organisation. I am excited to see how Valerie's career unfolds!"
+    ]
+  },
+  {
+    "name": "John Wyldbore",
+    "role": "Head of IT Innovation",
+    "company": "Forterra PLC",
+    "photo": "assets/images/testimonials/John_Wyldbore_3.png",
+    "quote": [
+      "I had the pleasure of working closely with Val on a project to migrate our reporting system from our existing infrastructure to Tableau, and I couldn't be more impressed with her expertise and dedication. Val demonstrated exceptional skills in understanding the intricacies of our existing reports and their code while translating them seamlessly into Tableau. Her ability to grasp complex reporting requirements and efficiently recreate them while improving them for the end was truly remarkable.",
+      "Throughout the migration process, Val exhibited strong problem-solving abilities, tackling challenges with creativity and precision. Her attention to detail ensured that no aspect of the migration was overlooked while also ensuring the end user was happy.",
+      "Not only did Val excel in the technical aspects of the migration, but she also exhibited excellent communication skills. She kept all stakeholders informed and engaged throughout the process, ensuring that everyone was aligned and satisfied with the outcomes.",
+      "Thanks to Val's hard work and expertise, our organisation now benefits from a more robust and user-friendly reporting system in Tableau. I highly recommend Val for any data-related projects, as her proficiency and professionalism are truly outstanding."
+    ]
+  }
+]
