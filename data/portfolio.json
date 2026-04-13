@@ -43,14 +43,14 @@
   },
   {
     "id": 4,
-    "title": "Data Warehouse Project",
-    "description": "This project implements a modern data warehouse using the Medallion Architecture and realistic ERP data.",
-    "images": ["assets/images/portfolio/data-flow.png"],
-    "industry": "finance",
-    "category": "visualisation",
-    "projectType": "data-warehouse",
+    "title": "FMCG - Post-Acquisition Pipeline",
+    "description": "This project builds an end-to-end data pipeline in Databricks to solve a post-acquisition data integration problem.",
+    "images": ["assets/images/portfolio/FMCG_Data_Flow.png","assets/images/portfolio/repo_struc.png"],
+    "industry": "FMCG",
+    "category": "pipeline",
+    "projectType": "data-pipeline",
     "tools": ["sql", "python"],
-    "links": {"github": "https://github.com/geoffreyrwamakuba-rgb/Data-Warehouse-Project"
+    "links": {"github": "https://github.com/geoffreyrwamakuba-rgb/FMCG-Post-Acquisition-Pipeline"
     },
     "isMobile": false
   },
@@ -79,6 +79,19 @@
     "links": {"github": "https://github.com/geoffreyrwamakuba-rgb/Marketing_Spend_Sustainabality_Overview",
     "tableau":"https://public.tableau.com/views/MarketingOverview_17754841940160/MarketingSpendOverview?:language=en-GB&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"},
     "isMobile": false
-    }
+    },
+      {
+    "id": 7,
+    "title": "Data Warehouse Project",
+    "description": "This project implements a modern data warehouse using the Medallion Architecture and realistic ERP data.",
+    "images": ["assets/images/portfolio/data-flow.png"],
+    "industry": "finance",
+    "category": "visualisation",
+    "projectType": "data-warehouse",
+    "tools": ["sql", "python"],
+    "links": {"github": "https://github.com/geoffreyrwamakuba-rgb/Data-Warehouse-Project"
+    },
+    "isMobile": false
+  }
 
 ]
