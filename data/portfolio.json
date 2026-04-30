@@ -40,23 +40,8 @@
     "tableau":"https://public.tableau.com/views/MarketingOverview_17754841940160/MarketingSpendOverview?:language=en-GB&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"},
     "isMobile": false
     },
-    {
-    "id": 4,
-    "title": "Exploratory Analysis of Real Estate Data",
-    "description": "In this project I clean, transform and visualise decades of Connecticut real estate data.",
-    "images": ["assets/images/portfolio/scatterplot.png","assets/images/portfolio/filledmap.png",
-    "assets/images/portfolio/prop_type.png",
-    "assets/images/portfolio/1.1 Connecticut_property_sales_over_time.png" ],
-    "industry": "finance",
-    "category": "visualisation",
-    "projectType": "exploratory-analysis",
-    "tools": ["sql", "python","excel"],
-    "links": {"github": "https://github.com/geoffreyrwamakuba-rgb/Exploratory_Analysis__Connecticut_Real_Estate_Sales"
-    },
-    "isMobile": false
-  },
   {
-    "id": 5,
+    "id": 4,
     "title": "FMCG - Post-Acquisition Pipeline",
     "description": "This project builds an end-to-end data pipeline in Databricks to solve a post-acquisition data integration problem.",
     "images": ["assets/images/portfolio/FMCG_Data_Flow.png","assets/images/portfolio/repo_struc.png"],
@@ -66,6 +51,18 @@
     "tools": ["sql", "python"],
     "links": {"github": "https://github.com/geoffreyrwamakuba-rgb/FMCG-Post-Acquisition-Pipeline"
     },
+    "isMobile": false
+  },
+  {
+    "id": 5,
+    "title": "AWS Youtube Project",
+    "description": "In this project I created a cloud-native ETL pipeline using AWS to process YouTube API data.",
+    "images": ["assets/images/portfolio/AWS_Data_Flow.png","assets/images/portfolio/aws_stepfunctions_graph.svg","assets/images/portfolio/aws_repo_structure.png"],
+    "industry": "saas",
+    "category": "pipeline",
+    "projectType": "data-pipeline",
+    "tools": ["sql", "python"],
+    "links": {"github": "https://github.com/geoffreyrwamakuba-rgb/AWS_Youtube_Project/tree/main"},
     "isMobile": false
   },
 
@@ -83,6 +80,21 @@
   },
       {
     "id": 7,
+    "title": "Exploratory Analysis of Real Estate Data",
+    "description": "In this project I clean, transform and visualise decades of Connecticut real estate data.",
+    "images": ["assets/images/portfolio/scatterplot.png","assets/images/portfolio/filledmap.png",
+    "assets/images/portfolio/prop_type.png",
+    "assets/images/portfolio/1.1 Connecticut_property_sales_over_time.png" ],
+    "industry": "finance",
+    "category": "visualisation",
+    "projectType": "exploratory-analysis",
+    "tools": ["sql", "python","excel"],
+    "links": {"github": "https://github.com/geoffreyrwamakuba-rgb/Exploratory_Analysis__Connecticut_Real_Estate_Sales"
+    },
+    "isMobile": false
+  },
+      {
+    "id": 8,
     "title": "Data Warehouse Project",
     "description": "This project implements a modern data warehouse using the Medallion Architecture and realistic ERP data.",
     "images": ["assets/images/portfolio/data-flow.png"],
@@ -95,7 +107,7 @@
     "isMobile": false
   },
      {
-    "id": 8,
+    "id": 9,
     "title": "MRR & Retention Analysis",
     "description": "Tracking SaaS revenue metrics is key for stakeholders. In this project I use SQL, Python, and Tableau to analyse and visualise MRR & retention.",
     "images": ["assets/images/portfolio/saas-dashboard.png"],
