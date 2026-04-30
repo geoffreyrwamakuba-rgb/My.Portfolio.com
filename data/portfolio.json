@@ -55,7 +55,7 @@
   },
   {
     "id": 5,
-    "title": "AWS Youtube Project",
+    "title": "AWS YouTube Project",
     "description": "In this project I created a cloud-native ETL pipeline using AWS to process YouTube API data.",
     "images": ["assets/images/portfolio/AWS_Data_Flow.png","assets/images/portfolio/aws_stepfunctions_graph.svg","assets/images/portfolio/aws_repo_structure.png"],
     "industry": "saas",
