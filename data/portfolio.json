@@ -1,21 +1,6 @@
 [
-  {
-    "id": 1,
-    "title": "Cleaning Transaction Data in SQL",
-    "description": "Raw financial data is often messy, inconsistent, or incomplete. In this project, I cleaned a year's worth of consumer transaction data.",
-    "images": [
-      "assets/images/portfolio/Card3.png"],
-    "industry": "Finance",
-    "category": "Data Analyst",
-    "projectType": "data-cleaning",
-    "tools": ["python", "sql"],
-    "links": {
-      "github": "https://github.com/geoffreyrwamakuba-rgb/Cleaning-Transaction-Data-in-SQL"
-    },
-    "isMobile": false
-  },
     {
-    "id": 2,
+    "id": 1,
     "title": "Shopify Overview - Protein Works",
     "description": "In this project I create a dashboard to assess DTC business health.",
     "images": ["assets/images/portfolio/Revenue Dashboard Apr.png","assets/images/portfolio/Ecommerce_Data_Model.svg","assets/images/portfolio/Ecommerce_Data_Flow.svg"],
@@ -28,7 +13,7 @@
     "isMobile": false
     },
       {
-    "id": 3,
+    "id":2,
     "title": "Marketing Overview - Protein Works",
     "description": "In this project I create a dashboard to assess marketing efficiency.",
     "images": ["assets/images/portfolio/Marketing Dashboard Apr.png","assets/images/portfolio/Ecommerce_Data_Model.svg","assets/images/portfolio/Ecommerce_Data_Flow.svg"],
@@ -38,6 +23,19 @@
     "tools": ["sql", "python","tableau"],
     "links": {"github": "https://github.com/geoffreyrwamakuba-rgb/Marketing_Spend_Sustainabality_Overview",
     "tableau":"https://public.tableau.com/views/MarketingOverview_17754841940160/MarketingSpendOverview?:language=en-GB&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"},
+    "isMobile": false
+    },
+    {
+    "id":3,
+    "title": "Airbnb - dbt Pipeline Project",
+    "description": "In this project I created an ETL pipeline using dbt + Snowflake for a property management company.",
+    "images": ["assets/images/portfolio/dbtproj_Tableau - Dashboard.png","assets/images/portfolio/dbtproj_Data lineage.png","assets/images/portfolio/dbtproj_DBT DAG.png"],
+    "industry": "Real Estate",
+    "category": ["visualisation","pipeline"],
+    "projectType": "data-pipeline",
+    "tools": ["sql", "python","tableau"],
+    "links": {"github": "https://github.com/geoffreyrwamakuba-rgb/Airbnb_dbt_Pipeline_Project",
+    "tableau":"https://public.tableau.com/views/AIRBNB_Overview/AIRBNB?:language=en-GB&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"},
     "isMobile": false
     },
   {
@@ -77,9 +75,24 @@
     "tools": ["sql", "python"],
     "links": {"github": "https://github.com/geoffreyrwamakuba-rgb/Spark-Declarative-Pipeline-Project/tree/main"},
     "isMobile": false
+  }, 
+  {
+    "id": 7,
+    "title": "Cleaning Transaction Data in SQL",
+    "description": "Raw financial data is often messy, inconsistent, or incomplete. In this project, I cleaned a year's worth of consumer transaction data.",
+    "images": [
+      "assets/images/portfolio/Card3.png"],
+    "industry": "Finance",
+    "category": "Data Analyst",
+    "projectType": "data-cleaning",
+    "tools": ["python", "sql"],
+    "links": {
+      "github": "https://github.com/geoffreyrwamakuba-rgb/Cleaning-Transaction-Data-in-SQL"
+    },
+    "isMobile": false
   },
       {
-    "id": 7,
+    "id": 8,
     "title": "Exploratory Analysis of Real Estate Data",
     "description": "In this project I clean, transform and visualise decades of Connecticut real estate data.",
     "images": ["assets/images/portfolio/scatterplot.png","assets/images/portfolio/filledmap.png",
@@ -94,7 +107,7 @@
     "isMobile": false
   },
       {
-    "id": 8,
+    "id": 9,
     "title": "Data Warehouse Project",
     "description": "This project implements a modern data warehouse using the Medallion Architecture and realistic ERP data.",
     "images": ["assets/images/portfolio/data-flow.png"],
@@ -107,7 +120,7 @@
     "isMobile": false
   },
      {
-    "id": 9,
+    "id": 10,
     "title": "MRR & Retention Analysis",
     "description": "Tracking SaaS revenue metrics is key for stakeholders. In this project I use SQL, Python, and Tableau to analyse and visualise MRR & retention.",
     "images": ["assets/images/portfolio/saas-dashboard.png"],
@@ -119,5 +132,4 @@
     },
     "isMobile": false
   }    
-
 ]
