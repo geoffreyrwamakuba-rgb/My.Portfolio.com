@@ -3,7 +3,7 @@
     "id": 1,
     "title": "Shopify Overview - Protein Works",
     "description": "In this project I create a dashboard to assess DTC business health.",
-    "images": ["assets/images/portfolio/Rev Tableau image.png","assets/images/portfolio/Ecommerce_Data_Model.svg","assets/images/portfolio/Ecommerce_Data_Flow.svg"],
+    "images": ["assets/images/portfolio/Rev Tableau Image.png","assets/images/portfolio/Ecommerce_Data_Model.svg","assets/images/portfolio/Ecommerce_Data_Flow.svg"],
     "industry": "Ecommerce",
     "category": "visualisation",
     "projectType": "data-warehouse",
