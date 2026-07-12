@@ -2586,7 +2586,7 @@ body {
 /* Social icons */
 .social-icon img {
     filter: invert(1); /* makes icons white */
-
+}
 
 
 /* ===== GLOBAL WIDTH CONTROL (RESPONSIVE) ===== */
@@ -2628,4 +2628,329 @@ body {
 .width-1440 {
     max-width: 100% !important;
 }
+
+/* =====================================================================
+   AMANIMULIRA THEME  —  feature/new-website  (v1)
+   Editorial cream + near-black + gold, serif display, mono labels.
+   Palette lifted from amanimulira's design tokens. This block is
+   appended last so it overrides the earlier navy-on-white theme.
+   ===================================================================== */
+
+:root {
+    /* --- amanimulira tokens --- */
+    --bg:            #EFEDE8;  /* warm cream page background */
+    --bg-cream:      #E8E4DD;  /* slightly deeper cream (cards/surfaces) */
+    --bg-dark:       #1A1A1A;  /* dark sections / primary buttons */
+    --bg-dark-card:  #252525;
+    --text:          #1A1A1A;  /* near-black body text */
+    --text-soft:     #4A4A4A;
+    --am-muted:      #888888;
+    --text-light:    #EFEDE8;  /* text on dark */
+    --accent:        #C1A555;  /* muted gold/brass */
+    --accent-hover:  #D4BA6A;
+    --rule:          #D0CCC4;  /* hairline divider on cream */
+    --rule-dark:     #333333;
+    --serif: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+    --mono:  'JetBrains Mono', 'Menlo', 'Consolas', monospace;
+
+    /* --- remap the legacy variables so the whole site follows --- */
+    --white:            #EFEDE8;
+    --white-smoke:      #EFEDE8;
+    --hero-mint:        #EFEDE8;
+    --frozen-water:     #E8E4DD;
+    --dark-teal:        #1A1A1A;
+    --dark-teal-hover:  #000000;
+    --text-primary:     #1A1A1A;
+    --text-muted:       #6B6560;
+    --border-light:     #D0CCC4;
+}
+
+::selection { background: var(--bg-dark); color: var(--bg); }
+
+/* --- base surfaces --- */
+body            { background: var(--bg); color: var(--text); }
+.page-container { background: var(--bg); }
+
+/* --- navigation: cream, hairline rule, dark text (undo dark-nav block) --- */
+.nav {
+    background: var(--bg) !important;
+    box-shadow: none !important;
+    border-bottom: 1px solid var(--rule);
+}
+.nav-logo-text {
+    color: var(--text) !important;
+    font-family: var(--mono);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+.nav-link          { color: var(--text-soft) !important; font-size: 14px; }
+.nav-link:hover    { color: var(--text) !important; }
+.nav-link.active   { color: var(--text) !important; border-bottom-color: var(--text) !important; }
+.social-icon img   { filter: none !important; opacity: 0.75; transition: opacity 0.2s; }
+.social-icon:hover img { opacity: 1; }
+
+/* --- display headings → Instrument Serif (single 400 weight) --- */
+.hero-headline {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(44px, 6.2vw, 68px);
+    line-height: 1.04;
+    letter-spacing: -0.5px;
+    color: var(--text);
+}
+.portfolio-title,
+.final-cta-title,
+.final-cta-headline,
+.service-title,
+.portfolio-card-title {
+    font-family: var(--serif);
+    font-weight: 400;
+    letter-spacing: -0.2px;
+    color: var(--text);
+}
+.portfolio-title,
+.final-cta-title { font-size: clamp(34px, 4.4vw, 48px); line-height: 1.08; }
+.service-title   { font-size: clamp(28px, 3.4vw, 38px); line-height: 1.1; }
+.portfolio-card-title { font-size: 22px; line-height: 1.15; }
+
+/* --- eyebrow / label text → JetBrains Mono, uppercase, tracked --- */
+.hero-trust-badge,
+.badge-title,
+.service-label,
+.cta-badge-title,
+.contact-form-title,
+.connect-title {
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: var(--text-soft);
+}
+/* small gold dot before the hero eyebrow, like amanimulira */
+.hero-trust-badge::before {
+    content: '';
+    display: inline-block;
+    width: 7px; height: 7px;
+    margin-right: 9px;
+    border-radius: 50%;
+    background: var(--accent);
+    vertical-align: middle;
+    transform: translateY(-1px);
+}
+.hero-subheadline,
+.portfolio-subtitle,
+.service-description { color: var(--text-soft); }
+
+/* --- buttons → black pills / outline pills --- */
+.cta-primary,
+.form-submit {
+    background: var(--bg-dark);
+    color: var(--text-light);
+    border-radius: 100px;
+    padding: 16px 34px;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 0.2px;
+}
+.cta-primary:hover,
+.form-submit:hover { background: #000000; }
+.cta-secondary {
+    background: transparent;
+    border: 1px solid var(--text);
+    color: var(--text);
+    border-radius: 100px;
+    padding: 15px 32px;
+    font-weight: 500;
+    font-size: 15px;
+}
+.cta-secondary:hover { background: var(--text); color: var(--text-light); }
+
+/* --- cards → cream surface, hairline border, quiet lift --- */
+.portfolio-card {
+    background: var(--bg-cream);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+}
+.portfolio-card:hover {
+    box-shadow: 0 10px 28px rgba(26, 26, 26, 0.08);
+    transform: translateY(-3px);
+}
+
+/* --- links / accents --- */
+.portfolio-links a,
+.testimonial-read-more { color: var(--text); }
+.portfolio-links a:hover { color: var(--accent); }
+
+/* --- footer stays dark (fits the dark-section rhythm) --- */
+.footer { background: var(--bg-dark); }
+
+/* --- form inputs on cream --- */
+.form-group input,
+.form-group textarea {
+    background: var(--bg);
+    border: 1px solid var(--rule);
+    color: var(--text);
+}
+.form-group input:focus,
+.form-group textarea:focus { border-color: var(--text); outline: none; }
+
+/* --- tool icons → dark monochrome (were navy/teal, clashed on cream) --- */
+.tool-icon img,
+.portfolio-tool-icon img { filter: grayscale(1) brightness(0.32) contrast(1.05); }
+
+/* --- line-art service images blend onto cream instead of white boxes --- */
+.service-image,
+.service-block-image img { mix-blend-mode: multiply; }
+.service-image-placeholder { background: var(--bg-cream); box-shadow: none; }
+
+/* --- full-bleed: nav hairline rule + footer span the entire viewport --- */
+/* page-container has side padding; break these two out to the edges. */
+body { overflow-x: clip; }
+.nav,
+.footer {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+}
+
+/* --- PROCESS ROW: Data / Insight / Action (horizontal) --- */
+.process-section { padding: 88px 0 96px; }
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+}
+.process-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+/* dot + line marker, sitting to the left of the text */
+.process-marker {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 9px;
+    flex-shrink: 0;
+}
+.process-dot {
+    width: 9px; height: 9px;
+    border-radius: 50%;
+    background: var(--text);
+    flex-shrink: 0;
+}
+.process-marker::after {
+    content: '';
+    display: block;
+    width: 44px;
+    height: 1px;
+    margin-left: 6px;
+    background: var(--rule-dark);
+}
+.process-label {
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text);
+    margin-bottom: 8px;
+}
+.process-desc {
+    font-size: 17px;
+    line-height: 1.4;
+    color: var(--text-soft);
+    max-width: 15ch;
+}
+/* colour progression: data = black, insight = grey, action = gold accent */
+.process-step.is-muted  .process-dot { background: var(--am-muted); }
+.process-step.is-accent .process-dot { background: var(--accent); }
+.process-step.is-accent .process-label { color: var(--accent); }
+
+/* centre the Data / Insight / Action trio (kills the empty space right of ACTION) */
+.process-grid {
+    display: flex;
+    justify-content: center;
+    gap: 84px;
+    flex-wrap: wrap;
+}
+.process-step { flex: 0 1 auto; }
+
+@media (max-width: 820px) {
+    .process-grid { flex-direction: column; align-items: flex-start; gap: 28px; }
+    .process-section { padding: 56px 0 64px; }
+    .process-desc { max-width: none; }
+}
+
+/* =====================================================================
+   WIDER CONTENT — less empty space on the sides (home + portfolio page)
+   ===================================================================== */
+
+/* Home "Featured Projects" carousel: slightly bigger cards, less side padding.
+   (JS CARD_WIDTH in index.html is kept in sync at 440.) */
+.portfolio-section { padding: 80px 48px; }
+.portfolio-card {
+    flex: 0 0 440px;
+    width: 440px;
+    min-width: 440px;
+    max-width: 440px;
+}
+
+/* Portfolio PAGE grid: fluid columns that fill the width instead of a
+   centred block of fixed 400px cards leaving big side margins. */
+.portfolio-grid .portfolio-card {
+    width: auto;
+    min-width: 0;
+    max-width: none;
+    flex: initial;
+}
+@media (min-width: 1201px) {
+    .portfolio-grid { grid-template-columns: repeat(3, 1fr); gap: 28px; }
+}
+.portfolio-grid-section { padding: 40px 40px 80px; }
+
+/* Portfolio page title → same Instrument Serif as the home headings */
+.page-title {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(40px, 5vw, 56px);
+    letter-spacing: -0.3px;
+    color: var(--text);
+}
+.page-subtitle { color: var(--text-soft); }
+
+/* --- portfolio images: the IMAGE sits on white; the panel around it is cream --- */
+/* Outer tile/panel matches the card (cream); only the image rectangle is white,
+   so each dashboard floats on white within a cream card. */
+.portfolio-screenshot { background: var(--bg-cream); }
+.portfolio-screenshot img { background: #ffffff; }
+
+/* =====================================================================
+   DENSITY / SCALE — dial the whole design down a notch so it doesn't
+   read as "zoomed in" at 100% browser zoom.
+   ===================================================================== */
+body { font-size: 15px; }
+.nav { height: 62px; }
+.nav-link { font-size: 13.5px; }
+
+.hero { padding: 8px 48px 44px; }
+.hero-image { max-width: 560px; transform: translateY(-30px); }
+.hero-headline { font-size: clamp(38px, 4.8vw, 56px); }
+.hero-subheadline { font-size: 16px; }
+
+.portfolio-title,
+.final-cta-title { font-size: clamp(28px, 3.2vw, 40px); }
+.page-title { font-size: clamp(32px, 3.8vw, 44px); }
+.portfolio-subtitle,
+.page-subtitle { font-size: 16px; }
+.portfolio-card-title { font-size: 19px; }
+
+.process-section { padding: 56px 0 72px; }
+.process-label { font-size: 12px; letter-spacing: 1.8px; }
+.process-desc { font-size: 15px; }
+
+.portfolio-section { padding: 56px 48px; }
+.portfolio-header { margin-bottom: 36px; }
 
