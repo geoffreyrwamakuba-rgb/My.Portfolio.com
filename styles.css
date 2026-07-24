@@ -2590,12 +2590,25 @@ body {
 
 
 /* ===== GLOBAL WIDTH CONTROL (RESPONSIVE) ===== */
+/* Scoped to tablet/desktop (>=768px): unscoped, this padding stacked on
+   top of each section's own mobile padding and squeezed content on phones. */
+@media (min-width: 768px) {
+    /* Main container */
+    .page-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 48px;
+    }
 
-/* Main container */
-.page-container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 48px;
+    /* Ensure all sections follow same width */
+    .hero-container,
+    .services-container,
+    .portfolio-container,
+    .contact-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        width: 100%;
+    }
 }
 
 /* Expand slightly on very large screens */
@@ -2603,16 +2616,6 @@ body {
     .page-container {
         max-width: 1600px;
     }
-}
-
-/* Ensure all sections follow same width */
-.hero-container,
-.services-container,
-.portfolio-container,
-.contact-container {
-    max-width: 1400px;
-    margin: 0 auto;
-    width: 100%;
 }
 
 /* Optional: give more breathing room on ultra-wide screens */
@@ -2886,36 +2889,40 @@ body { overflow-x: clip; }
 
 /* =====================================================================
    WIDER CONTENT — less empty space on the sides (home + portfolio page)
+   Card-width/padding rules scoped to tablet/desktop (>=768px): unscoped,
+   the fixed 440px card width overflowed the wrapper on phone screens.
    ===================================================================== */
+@media (min-width: 768px) {
+    /* Home "Featured Projects" carousel: slightly bigger cards, less side padding.
+       (JS CARD_WIDTH in index.html is kept in sync at 440.) */
+    .portfolio-section { padding: 80px 48px; }
+    .portfolio-card {
+        flex: 0 0 440px;
+        width: 440px;
+        min-width: 440px;
+        max-width: 440px;
+    }
 
-/* Home "Featured Projects" carousel: slightly bigger cards, less side padding.
-   (JS CARD_WIDTH in index.html is kept in sync at 440.) */
-.portfolio-section { padding: 80px 48px; }
-.portfolio-card {
-    flex: 0 0 440px;
-    width: 440px;
-    min-width: 440px;
-    max-width: 440px;
-}
-
-/* Portfolio PAGE grid: fluid columns that fill the width instead of a
-   centred block of fixed 400px cards leaving big side margins. */
-.portfolio-grid .portfolio-card {
-    width: auto;
-    min-width: 0;
-    max-width: none;
-    flex: initial;
+    /* Portfolio PAGE grid: fluid columns that fill the width instead of a
+       centred block of fixed 400px cards leaving big side margins. */
+    .portfolio-grid .portfolio-card {
+        width: auto;
+        min-width: 0;
+        max-width: none;
+        flex: initial;
+    }
+    .portfolio-grid-section { padding: 40px 40px 80px; }
 }
 @media (min-width: 1201px) {
     .portfolio-grid { grid-template-columns: repeat(3, 1fr); gap: 28px; }
 }
-.portfolio-grid-section { padding: 40px 40px 80px; }
 
-/* Portfolio page title → same Instrument Serif as the home headings */
+/* Portfolio page title → same Instrument Serif as the home headings.
+   Lower clamp floor (was a flat 40px) so it also fits narrow phones. */
 .page-title {
     font-family: var(--serif);
     font-weight: 400;
-    font-size: clamp(40px, 5vw, 56px);
+    font-size: clamp(28px, 8vw, 56px);
     letter-spacing: -0.3px;
     color: var(--text);
 }
@@ -2930,27 +2937,32 @@ body { overflow-x: clip; }
 /* =====================================================================
    DENSITY / SCALE — dial the whole design down a notch so it doesn't
    read as "zoomed in" at 100% browser zoom.
+   Scoped to tablet/desktop (>=768px): unscoped, the hero-headline clamp
+   floor (38px) and hero side padding (48px) overrode the dedicated
+   mobile rules and produced an oversized, cramped mobile hero.
    ===================================================================== */
-body { font-size: 15px; }
-.nav { height: 62px; }
-.nav-link { font-size: 13.5px; }
+@media (min-width: 768px) {
+    body { font-size: 15px; }
+    .nav { height: 62px; }
+    .nav-link { font-size: 13.5px; }
 
-.hero { padding: 8px 48px 44px; }
-.hero-image { max-width: 560px; transform: translateY(-30px); }
-.hero-headline { font-size: clamp(38px, 4.8vw, 56px); }
-.hero-subheadline { font-size: 16px; }
+    .hero { padding: 8px 48px 44px; }
+    .hero-image { max-width: 560px; transform: translateY(-30px); }
+    .hero-headline { font-size: clamp(38px, 4.8vw, 56px); }
+    .hero-subheadline { font-size: 16px; }
 
-.portfolio-title,
-.final-cta-title { font-size: clamp(28px, 3.2vw, 40px); }
-.page-title { font-size: clamp(32px, 3.8vw, 44px); }
-.portfolio-subtitle,
-.page-subtitle { font-size: 16px; }
-.portfolio-card-title { font-size: 19px; }
+    .portfolio-title,
+    .final-cta-title { font-size: clamp(28px, 3.2vw, 40px); }
+    .page-title { font-size: clamp(32px, 3.8vw, 44px); }
+    .portfolio-subtitle,
+    .page-subtitle { font-size: 16px; }
+    .portfolio-card-title { font-size: 19px; }
 
-.process-section { padding: 56px 0 72px; }
-.process-label { font-size: 12px; letter-spacing: 1.8px; }
-.process-desc { font-size: 15px; }
+    .process-section { padding: 56px 0 72px; }
+    .process-label { font-size: 12px; letter-spacing: 1.8px; }
+    .process-desc { font-size: 15px; }
 
-.portfolio-section { padding: 56px 48px; }
-.portfolio-header { margin-bottom: 36px; }
+    .portfolio-section { padding: 56px 48px; }
+    .portfolio-header { margin-bottom: 36px; }
+}
 
