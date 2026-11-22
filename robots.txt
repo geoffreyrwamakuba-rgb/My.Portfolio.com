@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mad4viz.github.io/ovm-analytics/sitemap.xml
+Sitemap: https://geoffreyrwamakuba.vercel.app/sitemap.xml
